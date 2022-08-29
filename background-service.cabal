@@ -1,0 +1,80 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.7.
+--
+-- see: https://github.com/sol/hpack
+
+name:           background-service
+version:        0.1.0.0
+description:    TODO
+author:         asimuskov
+maintainer:     opiumofthepeople@yandex.ru
+copyright:      2021 asimuskov
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Service.BackgroundService
+      Service.BackgroundService.BackgroundCrawler
+      Service.BackgroundService.BackgroundCrawler.Crawler
+      Service.BackgroundService.BackgroundWorkers
+      Service.BackgroundService.Internal.ForkClosable
+      Service.BackgroundService.Internal.Pool
+      Service.BackgroundService.Internal.Workers
+  other-modules:
+      Paths_background_service
+  hs-source-dirs:
+      src
+  default-extensions:
+      RecordWildCards
+      NamedFieldPuns
+      DuplicateRecordFields
+      OverloadedLabels
+      OverloadedStrings
+      FlexibleContexts
+      FlexibleInstances
+      StandaloneDeriving
+      ScopedTypeVariables
+      ExplicitForAll
+      TypeOperators
+      TypeApplications
+      DeriveGeneric
+      MonoLocalBinds
+      DerivingStrategies
+      BlockArguments
+      PostfixOperators
+      TupleSections
+      LambdaCase
+      NumericUnderscores
+      MultiWayIf
+      BangPatterns
+      ConstraintKinds
+      DataKinds
+      DefaultSignatures
+      DerivingVia
+      EmptyDataDecls
+      ExistentialQuantification
+      FunctionalDependencies
+      GADTs
+      KindSignatures
+      MultiParamTypeClasses
+      NumDecimals
+      PatternSynonyms
+      RankNTypes
+      TypeFamilies
+      ViewPatterns
+      PartialTypeSignatures
+  ghc-options: -Wall -Wcompat -Werror=missing-fields -Werror=incomplete-record-updates -Werror=missing-methods -Werror=incomplete-patterns -Wincomplete-uni-patterns -Wpartial-fields
+  build-depends:
+      base >=4.7 && <5
+    , resource-pool
+    , safe-exceptions
+    , stm
+    , text
+    , unliftio
+    , unliftio-core
+  default-language: Haskell2010
